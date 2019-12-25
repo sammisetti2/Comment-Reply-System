@@ -1,0 +1,28 @@
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+        <form>
+
+                <label id="usernameText">Enter Username: </label> <input type="text" id="username"> <br> <br><br>
+
+                Comment: <textarea id="comment"></textarea> <br> <br>
+
+                 <button id="editButton" onclick="addComment()" style="display: visible">Add Comment</button> <button id="saveButton" style="display: none" onclick="save()">Save</button>
+                 <button id="replyButton" style="display: none" onclick="replyToAnotherUser()">Reply to Comment</button> <button id="RsaveButton" style="display: none" onclick="Rsave()">Save</button>
+
+
+                 <ul id="commentsList"></ul>
+
+           </form>
+
+           <script src="index.js"> </script>
+
+</body>
+
+</html>
