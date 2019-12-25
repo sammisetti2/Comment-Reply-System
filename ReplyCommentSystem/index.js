@@ -36,6 +36,7 @@ if(username !="" && comment != "")
   }
 }
 
+}
 //get time and date
 function getTimeAndDate(){
     var date= new Date();
