@@ -8,31 +8,32 @@ event.preventDefault();
 var username = document.getElementById('username').value;
 var comment = document.getElementById('comment').value;
 
-var comment= {
-    commentId: generateCommentId(),
-    username:username,
-    comment:comment,
-    time:getTimeAndDate(),
-    creplies:[]
-}
+if(username !="" && comment != "")
+{
+  var comment= {
+      commentId: generateCommentId(),
+      username:username,
+      comment:comment,
+      time:getTimeAndDate(),
+      creplies:[]
+  }
 
-if(!isAnEntry('comments')){
-    localStorage.setItem('comments',JSON.stringify([]));
-    var comments=getAllComments();
-      comments.push(comment);
-      updateEntry(comments);
-      showComments();
-      clearFields();
-}
-else{
-    var comments=getAllComments();
-      comments.push(comment);
-      updateEntry(comments);
-      clearList();
-      showComments();
-      clearFields();
-}
-
+  if(!isAnEntry('comments')){
+      localStorage.setItem('comments',JSON.stringify([]));
+      var comments=getAllComments();
+        comments.push(comment);
+        updateEntry(comments);
+        showComments();
+        clearFields();
+  }
+  else{
+      var comments=getAllComments();
+        comments.push(comment);
+        updateEntry(comments);
+        clearList();
+        showComments();
+        clearFields();
+  }
 }
 
 //get time and date
